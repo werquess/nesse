@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nesse International | İletişim</title>
+    <meta name="description" content="Nesse International iletisim sayfasi." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Ana navigasyon">
+        <a class="brand" href="index.html"><img class="brand-logo" src="assets/nesse_logo_yazisiz.png" alt="Nesse International" /></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span></span><span></span><span></span><span class="sr-only">Menüyü aç</span>
+        </button>
+        <div class="nav-links" id="primary-menu">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="sektorler.html">Sektörler</a>
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a class="active" href="iletisim.html">İletişim</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <span class="eyebrow">İletişim</span>
+          <h1>Talebiniz için bizimle iletişime geçin</h1>
+          <p>Size en doğru dönüşü yapabilmemiz için talebinizi kısa bir mesajla paylaşabilirsiniz.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-grid">
+          <form class="contact-form" action="#" method="post">
+            <div class="field-group">
+              <label for="name">Ad Soyad</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="email">E-posta</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field-group">
+                <label for="phone">Telefon</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="subject">Konu</label>
+              <input id="subject" name="subject" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="message">Mesaj</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button class="btn" type="submit">Mesaj Gönder</button>
+          </form>
+
+          <aside class="contact-info">
+            <h2>İletişim Bilgileri</h2>
+            <div class="info-item">
+              <span class="mini-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <strong>E-posta</strong>
+                <p>info@nesseinternational.com</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="mini-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <strong>Telefon</strong>
+                <p>+90 000 000 00 00</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="mini-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <strong>Adres</strong>
+                <p>İstanbul, Türkiye</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="mini-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
+              <div>
+                <strong>Çalışma Saatleri</strong>
+                <p>Pazartesi - Cuma, 09:00 - 18:00</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section no-top">
+        <div class="container">
+          <div class="map-placeholder">
+            <span>Harita Alanı</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><img class="brand-logo" src="assets/nesse_logo_yazisiz.png" alt="Nesse International" /></a>
+          <p>Uluslararası pazara yönelik güvenilir, sürdürülebilir ve profesyonel çözümler.</p>
+        </div>
+        <div>
+          <h3>Hızlı Linkler</h3>
+          <a href="index.html">Ana Sayfa</a><a href="sektorler.html">Sektörler</a><a href="hakkimizda.html">Hakkımızda</a><a href="iletisim.html">İletişim</a>
+        </div>
+        <div>
+          <h3>İletişim</h3>
+          <p>info@nesseinternational.com</p><p>+90 000 000 00 00</p><p>İstanbul, Türkiye</p>
+        </div>
+        <div>
+          <h3>Sosyal Medya</h3>
+          <div class="social-row" aria-label="Sosyal medya ikonları"><span><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span><span><i class="fa-brands fa-instagram" aria-hidden="true"></i></span><span><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Nesse International. Tüm hakları saklıdır.</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
