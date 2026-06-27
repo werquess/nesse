@@ -366,7 +366,8 @@ p {
 
 .service-card h3,
 .value-card h3,
-.feature-item h3 {
+.feature-item h3,
+.detail-list h3 {
   margin-bottom: 8px;
   color: var(--ink);
   font-size: 1.08rem;
@@ -542,6 +543,70 @@ p {
   background: var(--green);
 }
 
+.sector-detail-hero {
+  padding: 74px 0;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-soft) 100%);
+}
+
+.sector-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.9fr);
+  gap: 54px;
+  align-items: center;
+}
+
+.sector-detail-grid h1 {
+  max-width: 780px;
+  margin-bottom: 22px;
+  color: var(--ink);
+  font-size: clamp(2.35rem, 4.4vw, 4.4rem);
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.sector-detail-grid p {
+  max-width: 680px;
+  font-size: 1.08rem;
+}
+
+.detail-media,
+.about-media {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(70, 132, 50, 0.18);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.detail-media img,
+.about-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 430px;
+  object-fit: cover;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.detail-list {
+  display: grid;
+  gap: 16px;
+}
+
+.detail-list article {
+  padding: 24px;
+  border: 1px solid rgba(70, 132, 50, 0.18);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.05);
+}
+
 .about-grid,
 .contact-grid {
   display: grid;
@@ -550,67 +615,64 @@ p {
   align-items: center;
 }
 
-.visual-placeholder,
-.map-placeholder {
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(135deg, rgba(70, 132, 50, 0.12), rgba(154, 216, 114, 0.08)),
-    var(--surface-gray);
-  color: var(--green);
-  font-weight: 800;
+.map-section {
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-soft) 100%);
 }
 
-/* Harita Kartı - Form ile aynı görünüm */
-.map-card,
-.map-area,
-.map-placeholder {
+.map-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.46fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: stretch;
+  padding: 28px;
+  border: 1px solid rgba(70, 132, 50, 0.18);
+  border-radius: var(--radius);
   background: #ffffff;
-  border: 1px solid rgba(70, 132, 50, 0.22);
-  border-radius: 8px;
-  padding: 34px;
   box-shadow: 0 18px 45px rgba(70, 132, 50, 0.08);
 }
 
-/* Harita iframe alanı */
-.map-card iframe,
-.map-area iframe,
-.map-placeholder iframe {
+.map-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+}
+
+.map-copy h2 {
+  margin-bottom: 14px;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.13;
+}
+
+.map-address {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 14px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.map-address p {
+  margin: 0;
+  color: #344054;
+  font-weight: 650;
+}
+
+.map-area {
+  overflow: hidden;
+  min-height: 420px;
+  border: 1px solid rgba(70, 132, 50, 0.22);
+  border-radius: var(--radius);
+  background: var(--surface-gray);
+}
+
+.map-area iframe {
   width: 100%;
-  height: 420px;
+  height: 100%;
+  min-height: 420px;
   display: block;
-  border: 1px solid rgba(70, 132, 50, 0.28);
-  border-radius: 7px;
-}
-
-/* Eski placeholder yazısı varsa */
-.map-placeholder span {
-  display: none;
-}
-
-/* Mobil */
-@media (max-width: 768px) {
-  .map-card,
-  .map-area,
-  .map-placeholder {
-    padding: 24px;
-  }
-
-  .map-card iframe,
-  .map-area iframe,
-  .map-placeholder iframe {
-    height: 320px;
-  }
-}
-
-.visual-placeholder {
-  min-height: 430px;
-}
-
-.map-placeholder {
-  min-height: 320px;
 }
 
 .two-column {
@@ -779,9 +841,12 @@ textarea {
 
   .hero-grid,
   .split,
+  .sector-detail-grid,
+  .detail-layout,
   .about-grid,
   .contact-grid,
-  .two-column {
+  .two-column,
+  .map-shell {
     grid-template-columns: 1fr;
   }
 
@@ -818,11 +883,6 @@ textarea {
     display: block;
   }
 
-  .map-area {
-    height: 320px;
-    border-radius: 14px;
-  }
-
   .nav-links {
     position: absolute;
     inset: 68px 14px auto;
@@ -851,12 +911,14 @@ textarea {
 
   .hero,
   .section,
-  .page-hero {
+  .page-hero,
+  .sector-detail-hero {
     padding: 58px 0;
   }
 
   .hero-copy h1,
-  .page-hero h1 {
+  .page-hero h1,
+  .sector-detail-grid h1 {
     font-size: 2.55rem;
   }
 
@@ -887,8 +949,17 @@ textarea {
   .content-card,
   .contact-form,
   .contact-info,
-  .sector-panel {
+  .sector-panel,
+  .detail-list article,
+  .map-shell {
     padding: 22px;
+  }
+
+  .detail-media img,
+  .about-media img,
+  .map-area,
+  .map-area iframe {
+    min-height: 320px;
   }
 }
 

@@ -24,12 +24,14 @@ const revealItems = document.querySelectorAll(
     ".service-card",
     ".feature-item",
     ".sector-panel",
-    ".visual-placeholder",
+    ".sector-detail-grid",
+    ".detail-list article",
+    ".about-media",
     ".content-card",
     ".value-card",
     ".contact-form",
     ".contact-info",
-    ".map-placeholder",
+    ".map-shell",
     ".footer-grid > div",
   ].join(",")
 );
